@@ -1,0 +1,1461 @@
+Venkatesan GVenkatesan G Blogs
+
+
+
+Follow
+
+
+Everything About Git
+
+Venkatesan G's photo
+Venkatesan G
+·
+Jun 23, 2023
+·
+19 min read
+
+Discover the ultimate guide to Git and GitHub on my student-friendly blog. I've got you covered from start to finish, explaining everything step by step. Whether you're a beginner or want to level up your skills, I'll walk you through connecting the dots and mastering Git. Get ready to dive into the world of code collaboration and version control. Let's make learning Git simple and fun!
+
+Table of content
+What VCS and Types of VCS
+
+How To Config GIT
+
+Basic Linux Commands
+
+What Three Stage Architecture
+
+How to Create a Snapshot
+
+Git Branching & Merging / What is Re-Base
+
+Git Stash and Git Squash Commit
+
+Git Collaboration
+
+Advanced Git Commands which are useful
+
+Complete Steps from Git to Github with Example
+
+What is VCS
+VCS stands for Version Control System
+
+It's Just a Software. Which Helps us to Manage the version control
+
+track changes to source code and other files in a software project
+
+Types of VCS
+Local Version Control System (LVCS)
+
+Centralized Version Control System (CVCS)
+
+Distributed Version Control System (DVCS)
+
+LOCAL VCS
+LVCS is the simplest form of VCS
+
+where files and their versions are stored locally on a developer's machine
+
+Disadvantages: It cannot share change with other developers
+
+Example: LVCS is the RCS (Revision Control System)
+
+CENTRALIZED VCS
+There is a central server that stores the entire history and versions of files
+
+They check out a copy of the file from the central repository. where they can pull the file central Repository
+
+They can make changes, test them locally, and then commit their changes back to the repository. where they push the file to the central Repository.
+
+Disadvantages: if the Central sever fails the Completly versions of files will be crashed.
+
+DISTRIBUTED VCS
+Every developer has a complete copy of the repository, including the entire history and all versions of files.
+
+Developers can make changes locally, create branches, and perform other operations without requiring a connection to a central server.
+
+Distributed VCS is a Combination of Local VCS + Centralized VCS.
+
+Example: GIT
+
+Where Every Developer has a complete copy of the source code. they need to first commit to the change made in the source code to Local VCS then Push the Remote Repository
+
+Example For Remote Repository: GIT HUB
+
+HOW TO CONFIG GIT
+Set your name: In the terminal, enter the following command to set your name
+
+git config --global user.name "Your Name"
+
+Replace "Your Name" with your actual name. This sets your name to be associated with your commits.
+
+Set your email address: Enter the following command to set your email address
+
+git config --global user.email "youremail@example.com"
+
+Replace "youremail@example.com" with your actual email address. This associates your email address with your commits.
+
+git --version - To Check git is installed successfully
+
+git config --list - To Check all the names and email
+
+Basic Linux Commands
+pwd - print the working directory
+
+clear - clear the terminal
+
+cd - change the directory
+
+cd <path> - change using the path
+
+cd .. - change to the parent directory
+
+ls - list the folder in the current directory
+
+How to Create a File
+
+we can create a file in three ways
+
+touch command
+
+cat command
+
+vim command
+
+USING TOUCH COMMAND
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  touch <filename>
+Where you can only create a file
+
+💡
+Its primary purpose is to create an empty file
+USING CAT COMMAND
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  cat > <filename>
+
+
+💡
+Its primary purpose is to create and add content in it
+USING VIM EDITOR
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  vim <filename>
+💡
+vim COMMAND is Similar to cat COMMAND
+HOW TO OPEN A FILE
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  cat <filename>
+HOW TO REMOVE A FILE
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  rm <filename>
+What Three Stage Architecture
+The three main stages or areas where changes to files are tracked and managed. These stages are also known as the Git workflow
+
+
+
+Working Directory
+The working directory is where you make changes to your files
+
+It represents the current state of your project's files and directories on your local machine
+
+git init - Create an Empty GIT Repository in that directory and converts an existing directory into a WORKING DIRECTORY
+
+After making changes to files in the working directory,
+
+git add . - This Command Helps to add all the changes to the staging area.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git init 
+  git add .
+Staging Area
+The staging area is an intermediate stage where you prepare and organize changes before committing them to the Git repository or Local repository
+
+The staging area acts as a snapshot of the changes you want to include in the next commit to the local repository.
+
+git status - You can review the changes in the staging area
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git status
+Local Repository
+The repository where the changes are permanently recorded and stored.
+
+When you are satisfied with the changes in the staging area
+
+git commit -m "Your commit message" - commits represent a specific version where changes are permanently recorded and stored in the local repository
+
+Each Commit contains - a unique identifier [ Hash ID ] and A commit message
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git commit -m "Your commit message"
+Let me Now Elaborate with an Example
+How to a Creating Snapshot
+
+STEP 1: CREATING A WORKING DIRECTORY
+
+git init - Create an Empty GIT Repository and converts the existing directory to a working directory
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git init
+
+
+Now can see an empty .git folder in your project folder.
+
+Sometimes you may not be able to see it. In that case, go to
+
+view > show and enable see the hidden items in the folder.
+
+git clone <repository_URL> - if you want to clone a repository hosted on GitHub, you can find the URL on the repository's page. Make a local copy of the server repository.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git clone <repository_URL>
+
+
+There are two ways to clone the remote repo to the local machine
+
+USING HTTPS
+
+Git over HTTP/HTTPS allows you to interact with GitHub repositories.
+
+using the standard HTTP or HTTPS protocols.
+
+doesn't require additional setup or configuration on the client side.
+
+💡
+Required Username & password authentication Every time
+USING SSH
+
+Git over SSH (Secure Shell) allows secure communication and authentication between your local machine and the remote repository.
+
+SSH is commonly used for both public and private repositories.
+
+It requires some initial setup,
+
+Generating SSH key And Adding Key to GitHub
+
+By using GIT GUI
+
+
+
+
+
+now copy the key and paste it to GitHub
+
+
+
+By USING COMMAND
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  ssh-keygen -o -t rsa -C "youemail@email.com"
+the key will be generated in the .shh file location you can copy the key and paste it to GitHub
+
+
+
+go to the file location displayed in cmd and check for file id_rsa_pub
+
+
+
+now copy the key and paste it to GitHub
+
+These are the two ways to create a ssh key and add it to GitHub.
+
+Now you follow the remaining steps in the blog.
+
+STEP 2: ADD CHANGES TO THE STAGING AREA
+
+Make changes to your files in the repository
+
+
+CONTENT INSIDE THE FILE
+
+
+
+git add . - command to add all the changes to the staging area.
+
+use can also use git add <file name> to add the specific file to the staging area.
+
+STEP 3: To commit all changes from the staging area to the local repository
+
+git commit -m "commit message" - This command creates a new commit with Record your local changes to your local repository.
+
+-m flag allows you to provide a commit message within quotes.
+
+git log - a command displays a list of commits
+
+git log --all --graph - displays a list of all commits in the graph
+
+In these three steps, we have created a project with index.html and committed it to the local repository.
+
+Git Branching & Merging
+Branching means diverging from the mainline and continuing to work separately without messing with the mainline. The branch is a clone of our master/main branch.
+
+Let's Explain this with an Example,
+
+where now are working on a new feature of the website of our company or organization. where our manager comes and tells you to fix a bug on the website and where you are not finalized with the feature you working on.
+
+In this case, Git Branch comes into play.
+
+In such cases, you should not make changes in the master branch directly. Instead, you should create a branch. It is also good practice to create a branch for new features after the code review to merge them with the main or master branch.
+
+Steps in Creating a Branch and merging it
+STEP 1: Create a Branch
+
+💡
+git branch <Branch name> - this command help to create a branch
+💡
+git branch - this command help to see all the branch
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git branch <Branch name>
+git branch
+Where I have created a branch using the git branch <name branch> command
+
+
+
+STEP 2: CHANGING OR ADDING NEW FEATURES TO THE NEW BRANCH
+
+💡
+git checkout <branch name> - this command help to switch to a new branch
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git checkout <branch name>
+
+
+CHANGES I MADE IN THE FEATURE BRANCH
+
+
+
+EXAMPLE
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git commit -m "your commit message"
+Where now I have committed all the changes to Local Repository
+
+
+
+STEP 3: MERGE THE BRANCH TO THE MAIN/MASTER BRANCH
+💡
+git branch - check the branch name
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git branch
+
+
+💡
+* - is pointing to the current branch
+git checkout <branchname> - go to the main branch or master branch. to which branch u need to merge the branch
+
+git merge <branchname> - the command will help u to merge the branch
+
+
+
+git merge <branch name> - command to merge the branch
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git merge <branch name>
+If you want to merge two branches, make sure you are in the main branch or the branch you want, then enter the branch name you want to merge.
+
+What is Diff's B/w GIT Merge & Rebase
+
+
+Git Stash
+The stash command is particularly useful in scenarios
+
+Any uncommitted changes in your working directory that conflict with the branch switch will be overwritten
+
+You Cannot Switch branches without committing the changes made in the current branch
+
+The git stash command is used in Git to save changes that you have made to your working directory, but you don't want to commit yet. It allows you to temporarily store your changes in a stack and switch to a different branch or perform other operations without committing the changes
+
+For Example :
+
+let's take the feature branch you are working on a new feature of the website on the feature branch and suddenly the manager comes and tells you to fix a small bug on the website. where you are not satisfied or not completed with changes in the feature branch u don't want to commit them in the local repository where you cannot switch the main/master branch without committing the changes in the feature where Git stash helps in the scenario. where you can put all the commit into a stack.
+
+
+
+GIT STASH
+git stash: This command is used to temporarily save changes in your working directory into a stack.
+
+It allows you to switch to a different branch or apply a patch without committing the changes.
+
+
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git stash
+Git STASH LIST
+git stash list: This command is used to display a list of stashes in your Git repository. It shows information about each stash, such as the stash reference, branch name, and stash message
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git stash list
+
+
+GIT STASH POP
+git stash pop: this can be helpful when you want to apply the changes from the most recent stash or to pop the top of the recent stash in the stack.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git stash pop
+
+
+GIT STASH APPLY
+git stash apply: allows you to reapply changes from a stash without removing it from the stash list
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git stash apply
+
+git stash apply stash@{1}
+The command git stash apply stash@{1} is used to apply a specific stash from the stash list to your working directory
+
+
+
+GIT STASH DROP
+Using git stash drop allows you to remove specific stashes from the stash list when you no longer need them or want to free up space in the stash list
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git stash drop
+
+
+Command	Description
+git stash drop	Discards a specific stash and removes it from the stash list.
+git stash pop	Restores the most recent stash, applies it to the working directory, and removes it from the stash list.
+git stash apply	Restores a specific stash, applies it to the working directory, and keeps it in the stash list.
+These commands are primarily used to manage stashes in Git. Stashing allows you to temporarily save your changes in a separate area, allowing you to switch branches or perform other tasks without committing the changes.
+
+Git Collaboration
+Git push
+git push: command is used to send local branch commits to a remote repository.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+ git push --set-upstream origin <branch_name>
+ ( or )
+ git push -u origin <branch_name>
+--set-upstream (or) -u: set the upstream branch for the local branch you are pushing. It associates the local branch with a branch on the remote repository.
+
+origin: This specifies the name of the remote repository. the default name was given name for the remote repository when we clone it. It is like a nickname of the remote repository.
+
+Git pull command
+
+git pull: The git pull command is doing two things at the same time.
+
+💡
+git pull = git fetch + git merge
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+ git pull <remote>
+Fetch: It retrieves the latest commits, branches, and tags from the specified remote repository.
+
+Merge: If there are any new commits on the remote branch that you don't have in your local branch, Git automatically merges those changes into your current branch.
+
+Git fetch
+git fetch: use the git fetch command to fetch updates from the remote.
+
+and check if the local repo is up-date with the remote repo.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+ git fetch --all
+Git remote
+
+the git remote command helps manage connections to these remote repositories.
+
+-v shows you all the remote connections.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+ git remote -v
+Advanced Git Commands which are useful
+GIT SQUASH
+Git squash is a technique used to combine multiple commits into a single commit
+
+When we push our code to any organization or open a code project. where they do not need your random commits to be merged into their large code base. so its always a good practice to SQUASH your commit and then push
+
+
+
+Now you can see three commit using Git SQUASH Command you can make it one commit.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+  git rebase -i HEAD~[no of commit you need to Squash]
+  Example : 
+  git rebase -i HEAD~2
+
+
+where -i in the command will open a interactive cell mode
+
+
+
+where can change the pick to s or squash to squash the commit
+
+
+
+now you can change the commit message
+
+
+
+Now I have combined two commits into one commit, this is how you need to squash all random commits in the branch into one commit before push to Organization or any Open Source Project.
+
+GIT REVERT
+The git revert command is used to undo a specific commit by creating a new commit that undoes the changes made in the original commit
+
+It allows you to safely reverse the effects of a commit without altering the commit history.
+
+Git revert is like a undo command
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git revert
+
+
+💡
+Does not remove the original commit or modify the commit history
+💡
+Instead, it creates a new commit that undoes the changes, allowing you to keep a record of the reversion
+GIT RESET
+You can reset the current head to a specific state using the git reset command.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git reset --hard <commit id>
+💡
+git reset changing the commit history.
+Complete Steps from Git to Github with Example
+THERE ARE TWO WAYS TO DO THIS
+
+SET UP A REMOTE Repository AND CONNECT IT TO A LOCAL Repository.
+
+SET UP A LOCAL Repository AND PUT IT TO Remote Repository [ GITHUB ].
+
+SET UP A LOCAL Repository AND PUT IT TO Remote Repository [ GITHUB ].
+STEP 1: YOU NEED GIT TO BE INSTALL AND CREATE A GitHub Account
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+1. GIT: https://git-scm.com/
+
+2. GitHub: https://github.com/
+STEP 2: Create a Local Git Repository
+
+I Have Created a Directory using mkdir <folder name> command
+
+
+
+Now I Have Created an empty file using the touch command
+
+By using git init, the command I have created a git local repository and converted a current directory to a working directory
+
+
+
+Now I am Commit the changes made to the local repository
+
+
+
+STEP 3: CREATE A REMOTE REPOSITORY
+
+Now Setting up REMOTE Repository in GitHub
+
+When you open GitHub go to the repositories tabs and Click the New Button to create a new Remote Repository
+
+
+
+The repository name should be unique, where there shouldn't be an existing repo name in your GitHub account. Then click on Create Repository Button
+
+
+
+Now you can see the repository with the name I Metion in the above step
+
+
+
+STEP 4: Connect Local Repository To Remote Repo [ GitHub ]
+
+The advantage of copying with SSH links is mentioned in the section above where I explain how to create a SHH section.
+
+
+
+Now use the git remote command to make a connection with the remote repository to the local repository.
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git remote add origin https://github.com/VenkatMastercoder/Git-tutorial.git
+
+
+STEP 5: Push Changes to GitHub
+
+Now that we have made a successful Connection from Local Repository to Remote Repository
+
+Then you can use the git pull command to fetch change in Remote Repo to Local Repository
+
+git push command is used to update the changes from Local Repository to Remote Repository
+
+POSSIBLE ERROR: 1
+
+
+
+This Error comes because we are not set which branch from the local Repository Need to push to Remote Repository, To Solve this
+
+If you use git remote -v command to check the Remote Repo Link
+
+
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git push --set-upstream origin <branch_name>
+--set-upstream (or) -u: set the upstream branch for the local branch you are pushing. It associates the local branch with a branch on the remote repository.
+
+origin: This specifies the name of the remote repository. the default name was given name for the remote repository when we clone it. It is like a nickname for the remote repository.
+
+POSSIBLE ERROR: 2
+
+Then ERROR Accures Because you have not set up the SHH Key Properly. I have discussed this problem in detail in my There are two ways to clone Section in this Blog. and create the ssh key again. then the problem will be solved
+
+
+
+after this, if run git push command the changes from the local Repository will be pushed to the remote repository
+
+SET UP A REMOTE Repository AND CONNECT IT TO A LOCAL Repository.
+STEP 1: YOU NEED GIT TO BE INSTALL AND CREATE A GitHub Account
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+1. GIT: https://git-scm.com/
+
+2. GitHub: https://github.com/
+STEP 2: CREATE A REMOTE REPOSITORY OR CLONE AN EXISTING REPO
+
+In this case, there are two scenarios
+
+you create a remote repository as I have shown in the above Example for Setting up local to remote in step 3, and follow the remaining steps
+
+or
+
+This scenario usually happens when you contribute to an open-source project or need to work on other projects, let me Give an Example in that Case
+
+STEP 2.1: NEED TO FORK THE PROJECT FIRST
+
+Which is a Copy of the Orginal Code Base Repository from the owner when you press fork it will create a complete copy of the code base to Your Account
+
+
+
+see the user name and the project name, where you can see a fork Button if you click that
+
+
+
+As I told the username will be yours and the project will be followed by that, where now you can see a complete copy of the original code in your repository
+
+
+
+now you can see above it will show your username/project name
+
+STEP 2.2: NEED TO CLONE THE PROJECT REPOSITORY
+
+where now you need to clone that Remote Repository to Local Repository
+
+using the git clone <Repo_url> command, I recommend using SHH Link For Clone
+
+
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git clone <fork_Repo_URL>
+Now After this command, you can see the Remote Repository file in Local Repository
+
+
+
+STEP 3: Make a NEW Branch Start Contributing to it
+
+Now I made a Few changes in the code base and created a new feature branch, by following the commands
+
+Where it is also a good practice not to commit changes to the master branch, so for new features I have created a "newfeature" branch to add New Features
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git branch newfeature 
+git checkout newfeature
+
+
+where after finalizing the new feature in the newfeature branch now commit to the changes to the local Repository
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git add . 
+git commit -m "newfeature"
+git log
+
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git status
+I have used git log command to check all have been done correctly
+
+STEP 4: Make Merge the new feature branch with the main branch and push
+
+
+
+now using push commit to update our remote
+
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+
+COPY
+git push
+git status: command to check all have been done correctly
+
+STEP 5: OPEN THE PULL REQUEST
+
+If you create a pull request then
+
+
+
+Now click on the create pull request button
+
+
+
+you can see from venkatMastercoder --> main branch sending to pull the changes form VenkatMastercoder --> main branch to TharunBalaji2004 --> main branch
+
+
+
+Now we have successfully created a pull request when the owner of the codebase will now check the changes of the new feature if he is satisfied with it. then he will merge it.
+
+
+
+Now from Owner of Code Base [ Repository ] View
+
+This is how it will look from the owner's view after you send a pull request
+
+
+
+In this step, before the owner merges the code into the codebase the code review will happen the if any issue is found they will comment on your need to solve it and send a pull request again
+
+
+
+now the owner of codeBase [ Repository ] is satisfied with your code he merge it to the main / master branch of codeBase [ Repository ]
+
+
+
+now you can see the code which I have contributed from my VenkatesanMastercoder/main Branch is merged to TharunBaja2004/Main Branch
+
+
+
+You can also contribute to any open source project or to the repository of your company or organization by following these steps
+
+LinkedIn: Connect with me - at Click Here
+
+Thank you for reading my blog, where I have provided a comprehensive guide on Git and GitHub. If you're interested in learning more about React, Docker, Jenkins, Kubernetes, and other topics, I invite you to connect with me on LinkedIn for further updates and articles
+
+
+1
+
+1
+
+
+Subscribe to my newsletter
+Read articles from Venkatesan G Blogs directly inside your inbox. Subscribe to the newsletter, and don't miss out.
+
+Enter your email address
+SUBSCRIBE
+Git
+GitHub
+linux-commands
+ 
+MORE ARTICLES
+
+Venkatesan G's photo
+Venkatesan G
+Docker Basics
+In this blog, I have dived into the fascinating world of virtualization and containerization, focusi…
+
+©2023 Venkatesan G Blogs
+
+Archive
+·
+Privacy policy
+·
+Terms
+Publish with Hashnode
+Powered by Hashnode - Home for tech writers and readers
+
+Every Thing About Git
